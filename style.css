@@ -1,0 +1,42 @@
+body{
+  background-image:url("background2.jpg");
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:100% 80%;
+}
+.icon-bar {
+  width:90px;
+  background-color:white;
+  position:fixed;
+}
+.icon-bar a{
+  display:block;
+  text-align:center;
+  padding:16px;
+  color:black;
+  transition: all 0.3s ease;
+  font-size:36px;
+}
+.icon-bar a:hover{
+  background-color:gray;
+  color:white;
+}
+
+#Register{
+      position:absolute;
+      left:45%;
+      top:76%;
+      width:120px;
+}
+#SignIn{
+  position:absolute;
+  left:58%;
+  top:76%;
+  width:100px;
+  border:2px solid white;
+}
+#Admin{
+  position:absolute;
+  left:94%;
+  border:2px solid white;
+}
