@@ -47,7 +47,7 @@ include 'db_conn.php';
                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                <div class="nav-user-info">
 
-                                   <h2 class="pageheader-title"><?php echo 'Welcome '.$_SESSION['name']; ?></h2>
+                                   <h2 class="pageheader-title" style="color:white;"><?php echo 'Welcome '.$_SESSION['name']; ?></h2>
                                    <span class="status"></span><span class="ml-2">Available</span>
                                </div>
                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
@@ -146,7 +146,12 @@ include 'db_conn.php';
                                  <div class="mainbox col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
                                        <div class="panel panel-info">
                                            <div class="panel-body" >
-                                               <form class="form-horizontal"  method="POST" action="upload_dataset.php?id=<?php echo $id;?>">
+
+                                              <div class="alert alert-danger">
+                                                <strong>Reminder!</strong> Your Dataset should only contain three factors which are : <br> Date, Time and Global Active Power. <br> Otherwise, Prediction with respect to your Dataset will not be proceeded further.
+                                              </div>
+
+                                               <form class="form-horizontal"  method="POST" action="upload_dataset.php?id=<?php echo $id;?>" enctype="multipart/form-data">
                                                  <div class="form-group">
                                                      <label for="lastname" class="col-md-6 control-label">Enter Time Interval of your Dataset : </label>
                                                  </div>
@@ -160,7 +165,7 @@ include 'db_conn.php';
                                                      <label for="lastname" class="col-md-3 control-label">End Date : </label>
 
                                                      <div class="col-md-5">
-                                                         <input type="date" class="form-control" name="end_date"  value = "" required>
+                                                         <input type="date" class="form-control" name="end_date"  value = "" required />
                                                      </div>
                                                  </div>
 
@@ -173,13 +178,13 @@ include 'db_conn.php';
                                                    <div class="form-group">
                                                        <label for="email" class="col-md-6 control-label">Upload Dataset (zip file) : </label>
                                                        <div class="col-md-9">
-                                                           <input type="file" class="form-control" name="dataset" value="" required >
+                                                           <input type="file" class="form-control" accept=".zip" name="zip_file" value="" required />
                                                        </div>
                                                    </div>
                                                    <div class="form-group">
                                                        <!-- Button -->
                                                        <div class="col-md-offset-3 col-md-9">
-                                                           <button id="btn-signup" type="submit" class="btn btn-warning"><i class="icon-hand-right"></i>Upload</button>
+                                                           <button id="btn-signup" type="submit" name="submit" class="btn btn-warning"><i class="icon-hand-right"></i>Upload</button>
                                                        </div>
                                                    </div>
 

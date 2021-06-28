@@ -136,7 +136,7 @@ include 'db_conn.php';
                                          while($fetch = mysqli_fetch_assoc($query)){
 
                                          ?>
-                                         <form class="form-horizontal"  method="POST" action="manage_profileDB.php?id=<?php echo $id ;?>">
+                                         <form class="form-horizontal"  method="POST" action="manage_profileDB.php?id=<?php echo $id ;?>" enctype="multipart/form-data">
 
 
                                            <div class="form-group">
@@ -186,6 +186,27 @@ include 'db_conn.php';
                                                      <input type="email" class="form-control" name="email" value="<?php echo $fetch['email'] ?>" required>
                                                  </div>
                                              </div>
+
+                                             <div class="form-group">
+                                                 <label for="pass" class="col-md-5 control-label">Global Active Power - 200 Time Step</label>
+                                                 <div class="col-md-9">
+                                                     <input type="file" class="form-control" name="GAP_200" value="" required >
+                                                 </div>
+                                             </div>
+                                              <div class="form-group">
+                                                  <label for="pass" class="col-md-5 control-label">Global Active Power - 25 Time Step</label>
+                                                    <div class="col-md-9">
+                                                        <input type="file" class="form-control" name="GAP_25" value="" required >
+                                                    </div>
+                                              </div>
+
+                                             <div class="form-group">
+                                                 <label for="pass" class="col-md-5 control-label">Train Loss and Test Loss</label>
+                                                 <div class="col-md-9">
+                                                     <input type="file" class="form-control" name="train_loss" value="" required >
+                                                </div>
+                                             </div>
+
 
                                              <div class="form-group">
                                                  <label for="pass" class="col-md-3 control-label">Current Password</label>
