@@ -29,7 +29,7 @@
         <!-- ============================================================== -->
        <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="dashboard/index.html">Energy Forecasting</a>
+                <a class="navbar-brand" href="">Electricity Prediction</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -125,10 +125,10 @@
                     <!-- ============================================================== -->
                     <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Line Graph - Prediction of Global Active Power for 200 Time step</h5>
+                            <h5 class="card-header">Line Graph - Result of Train Loss and Test Loss during the training of the model</h5>
                             <div class="card-body">
                                 <div id="">
-                                  <img src = "<?php echo $fetch['GAP_200']; ?>" alt="<?php echo $fetch['GAP_200']; ?>" width="550px;" />
+                                  <img src = "<?php echo $fetch['train_loss']; ?>" alt="<?php echo $fetch['train_loss']; ?>" width="550px;" />
                                 </div>
                             </div>
                         </div>
@@ -142,10 +142,10 @@
 
                     <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Line Graph - Prediction of Global Active Power for 25 Time step</h5>
+                            <h5 class="card-header">Line Graph - Predicted values with respect to the dataset</h5>
                             <div class="card-body">
                                 <div>
-                                  <img src="<?php echo $fetch['GAP_25']?>" alt="<?php echo $fetch['GAP_25']; ?>" width="550px;" />
+                                  <img src="<?php echo $fetch['GAP_200']?>" alt="<?php echo $fetch['']; ?>" width="550px;" />
                                 </div>
                             </div>
                         </div>
@@ -158,12 +158,12 @@
                     <!-- ============================================================== -->
                     <!--  zoom chart  -->
                     <!-- ============================================================== -->
-                    <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12 col-12">
+                     <div class="col-xl-9 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Line Graph - Results for the Train Loss and Test Loss during the training of the model</h5>
+                            <h5 class="card-header">Line Graph - Future Predicted values with respect to the dataset</h5>
                             <div class="card-body">
                                 <div>
-                                  <img src = "<?php echo $fetch['train_loss']; ?>" alt="<?php echo $fetch['train_loss']; ?>" width="550px;" />
+                                  <img src = "<?php echo $fetch['GAP_25']; ?>" alt="<?php echo $fetch['GAP_25']; ?>" width="550px;" />
                                 </div>
                             </div>
                         </div>
@@ -280,7 +280,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            Copyright © 2021 Energy Forecasting. All rights reserved.
+                            Copyright © 2021 Electricity Prediction. All rights reserved.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
