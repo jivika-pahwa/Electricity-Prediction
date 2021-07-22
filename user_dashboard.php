@@ -21,7 +21,7 @@ include 'db_conn.php';
    <link rel="stylesheet" href="dashboard/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
 
    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-   <title>Energy Forecasting - User Dashboard</title>
+   <title>Electricity Prediction - User Dashboard</title>
 </head>
 
 <body>
@@ -34,7 +34,7 @@ include 'db_conn.php';
        <!-- ============================================================== -->
        <div class="dashboard-header">
            <nav class="navbar navbar-expand-lg bg-white fixed-top">
-               <a class="navbar-brand" href="admin.php">Energy Forecasting</a>
+               <a class="navbar-brand" href="">Electricity Prediction</a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                    <span class="navbar-toggler-icon"></span>
                </button>
@@ -148,7 +148,32 @@ include 'db_conn.php';
                                            <div class="panel-body" >
 
                                               <div class="alert alert-danger">
-                                                <strong>Reminder!</strong> Your Dataset should only contain three factors which are : <br> Date, Time and Global Active Power. <br> Otherwise, Prediction with respect to your Dataset will not be proceeded further.
+                                                <strong>Reminder!</strong>
+                                                <ul>
+                                                  <li>Your Files should have  ' .csv ' extension. (CSV File)</li>
+                                                  <!-- <li>There should a delimiter ' ; ' between all the columns.</li> -->
+                                                  <li>Your Dataset should only contain three factors <br>(name of attributes should be same) as shown below :  </li>
+                                                  <li>Date</li>
+                                                  <li>Time</li>
+                                                  <li>Global_active_power</li>
+                                                  <li>Your Dataset should have minimum of 2 Lac entries.</li>
+                                                  </ul>
+                                                  <strong>Otherwise, Prediction with respect to your
+                                                 Dataset will not be proceeded further. <br>
+                                                 Below, is the sample Dataset for your reference.
+                                               </strong>
+
+                                              </div>
+
+                                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12">
+                                                  <div class="card">
+                                                      <h5 class="card-header">Sample Dataset For Household Power Consumption</h5>
+                                                      <div class="card-body">
+                                                          <div id="">
+                                                            <img src = "sample.PNG" alt="" width="550px;" style="cursor:pointer;" onclick="window.open(this.src);"/>
+                                                          </div>
+                                                      </div>
+                                                  </div>
                                               </div>
 
                                                <form class="form-horizontal"  method="POST" action="upload_dataset.php?id=<?php echo $id;?>" enctype="multipart/form-data">
@@ -204,7 +229,7 @@ include 'db_conn.php';
                <div class="container-fluid">
                    <div class="row">
                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            Energy Forecasting © 2021 . All rights reserved.
+                            Electricity Prediction © 2021 . All rights reserved.
                        </div>
                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                            <div class="text-md-right footer-links d-none d-sm-block">
