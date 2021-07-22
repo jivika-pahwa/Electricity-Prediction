@@ -26,7 +26,7 @@ include 'db_conn.php';
    <link rel="stylesheet" href="dashboard/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
 
    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-   <title>Energy Forecasting - Admin Dashboard</title>
+   <title>Electricity Prediction - Admin Dashboard</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@ include 'db_conn.php';
        <!-- ============================================================== -->
        <div class="dashboard-header">
            <nav class="navbar navbar-expand-lg bg-white fixed-top">
-               <a class="navbar-brand" href="admin.php">Energy Forecasting</a>
+               <a class="navbar-brand" href="admin.php">Electricity Prediction</a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                    <span class="navbar-toggler-icon"></span>
                </button>
@@ -188,24 +188,26 @@ include 'db_conn.php';
                                              </div>
 
                                              <div class="form-group">
-                                                 <label for="pass" class="col-md-5 control-label">Global Active Power - 200 Time Step</label>
-                                                 <div class="col-md-9">
-                                                     <input type="file" class="form-control" name="GAP_200" value="" required >
-                                                 </div>
-                                             </div>
-                                              <div class="form-group">
-                                                  <label for="pass" class="col-md-5 control-label">Global Active Power - 25 Time Step</label>
-                                                    <div class="col-md-9">
-                                                        <input type="file" class="form-control" name="GAP_25" value="" required >
-                                                    </div>
-                                              </div>
-
-                                             <div class="form-group">
                                                  <label for="pass" class="col-md-5 control-label">Train Loss and Test Loss</label>
                                                  <div class="col-md-9">
-                                                     <input type="file" class="form-control" name="train_loss" value="" required >
+                                                     <input type="file" class="form-control" name="train_loss" value="" >
+                                                 </div>
+                                             </div>
+
+                                             <div class="form-group">
+                                                 <label for="pass" class="col-md-5 control-label">Predicted Graph</label>
+                                                 <div class="col-md-9">
+                                                     <input type="file" class="form-control" name="GAP_200" value=""  >
                                                 </div>
                                              </div>
+                                             <div class="form-group">
+                                                 <label for="pass" class="col-md-5 control-label">Graph with Future Predicted values</label>
+                                                 <div class="col-md-9">
+                                                    <input type="file" class="form-control" name="GAP_25" value=""  >
+                                                 </div>
+                                              </div>
+
+
 
 
                                              <div class="form-group">
@@ -239,7 +241,7 @@ include 'db_conn.php';
                <div class="container-fluid">
                    <div class="row">
                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            Energy Forecasting © 2021 . All rights reserved.
+                            Electricity Prediction © 2021 . All rights reserved.
                        </div>
                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                            <div class="text-md-right footer-links d-none d-sm-block">
